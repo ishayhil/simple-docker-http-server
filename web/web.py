@@ -30,6 +30,7 @@ class WebServer:
         await site.start()
 
     async def _get_html(self, _request: web.Request) -> web.Response:
+        logger.info("hello")
         return web.Response(
             text=f"<p>This is html test web on {self._host}:{self._port}</p>",
             content_type="text/html",
